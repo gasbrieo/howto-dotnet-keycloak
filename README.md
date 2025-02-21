@@ -27,7 +27,7 @@
 
 ### Setup
 
-Update the `appsettings.json` Keycloak configurations:
+1. Update the `appsettings.json` Keycloak configurations:
 
 ```
  "Keycloak": {
