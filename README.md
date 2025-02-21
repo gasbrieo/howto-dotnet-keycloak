@@ -6,7 +6,7 @@
 
 ## Overview
 
-**HowTo.Net.Keycloak** serves as a implementation of authentication and authorization using Keycloak in .NET.
+**HowTo.Net.Keycloak** serves as an implementation of authentication and authorization using Keycloak in .NET.
 
 ## Features
 
