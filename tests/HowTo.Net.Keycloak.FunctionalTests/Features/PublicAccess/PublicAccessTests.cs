@@ -5,7 +5,7 @@ public class PublicAccessTests(CustomWebApplicationFactory factory) : IClassFixt
     private readonly HttpClient _client = factory.CreateClient();
 
     [Fact]
-    public async Task GetPublicAccess_WhenAuthenticated_ShouldReturnOk()
+    public async Task Get_WhenAuthenticated_ShouldReturnOk()
     {
         // Arrange
         _client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", StaticTokenService.GenerateToken());
@@ -18,7 +18,7 @@ public class PublicAccessTests(CustomWebApplicationFactory factory) : IClassFixt
     }
 
     [Fact]
-    public async Task GetPublicAccess_WhenNotAuthenticated_ShouldReturnOk()
+    public async Task Get_WhenNotAuthenticated_ShouldReturnOk()
     {
         // Arrange
         _client.DefaultRequestHeaders.Authorization = null;

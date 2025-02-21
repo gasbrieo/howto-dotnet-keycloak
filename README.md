@@ -16,9 +16,8 @@
   - Static analysis with SonarCloud
 
 - Basic .NET Project Structure
-  - Authentication using Keycloak
-  - Secure API endpoints with JWT Bearer Tokens
-  - Swagger integration for testing authentication flow
+  - Authentication and Authorization using Keycloak
+  - Swagger for testing authentication flow
   - Unit and Functional Tests
 
 ## Getting Started
@@ -51,17 +50,27 @@ Open `http://localhost:18080` and log in using the admin credentials.
 - Set Web Origins to `http://localhost:5001`
 - Click Save
 
-4. Configure Client Scopes:
+4. Configure Audience Client Scope:
 
 - Navigate to `Clients` > `howtoclient` > `Client Scopes` > `howtoclient-dedicated`
 - Click on Add Mapper
 - Select By Configuration
-- Choose Audience
+- Choose `Audience`
 - Set Name as `audience`
 - In Included Client Audience, select `howtoclient`
 - Click Save
 
-5. Start the .NET application:
+5. Configure Role Client Scope:
+
+- Navigate to `Clients` > `howtoclient` > `Client Scopes` > `howtoclient-dedicated`
+- Click on Add Mapper
+- Select By Configuration
+- Choose `User Client Roles`
+- Set Name as `roles`
+- In Client Id, select `howtoclient`
+- Set Token Claim Name as `roles`
+
+6. Start the .NET application:
 
 - Open Swagger at `http://localhost:5001/swagger`
 - Click on Authorize
@@ -72,6 +81,21 @@ Open `http://localhost:18080` and log in using the admin credentials.
 - Create a new account if not registered, or log in with existing credentials.
 - After logging in, Keycloak will redirect back to Swagger with the credentials saved.
 - Test restricted endpoints with the Bearer token.
+
+7. Configure Client Roles:
+
+- Navigate to `Clients` > `howtoclient` > `Roles`
+- Click on Create Role
+- Set Name as `reader`
+- Click Save
+- Create another with name as `writer`
+
+8. Link User to Role:
+
+- Navigate to `Users` > `your user` > `Role Mapping`
+- Click on Assigned role
+- Choose one or both of the created roles
+- Do the Swagger test again on the endpoints that are Role Based
 
 ### License
 
