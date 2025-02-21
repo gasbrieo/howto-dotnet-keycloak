@@ -3,7 +3,6 @@
 ![Sonar Quality Gate](https://img.shields.io/sonar/quality_gate/gasbrieo_howto-dotnet-keycloak?server=https%3A%2F%2Fsonarcloud.io&style=for-the-badge)
 ![Sonar Coverage](https://img.shields.io/sonar/coverage/gasbrieo_howto-dotnet-keycloak?server=https%3A%2F%2Fsonarcloud.io&style=for-the-badge)
 ![GitHub last commit](https://img.shields.io/github/last-commit/gasbrieo/howto-dotnet-keycloak?style=for-the-badge)
-![GitHub Release](https://img.shields.io/github/v/release/gasbrieo/howto-dotnet-keycloak?style=for-the-badge)
 
 ## Overview
 
