@@ -72,6 +72,16 @@ Open `http://localhost:18080` and log in using the admin credentials.
 
 6. Start the .NET application:
 
+- Ensure `appsettings.json` matches the Keycloak Host/Realm/Client:
+
+```
+ "Keycloak": {
+     "AuthServerUrl": "http://localhost:18080",
+     "Realm": "howto",
+     "ClientId": "howtoclient"
+ }
+```
+
 - Open Swagger at `http://localhost:5001/swagger`
 - Click on Authorize
 - In the form, enter:
